@@ -18,9 +18,9 @@
       
       <property name="show_sql">true</property>
       
-      <property name="hbm2ddl.auto">update</property>
+      <property name="hbm2ddl.auto">create</property>
      
-      <mapping class="com.garg.anmol.democart.model.Product"/>
+      <mapping class="garg.anmol.democart.model.Product"/>
       
    </session-factory>
 </hibernate-configuration>
