@@ -12,14 +12,13 @@ import garg.anmol.democart.model.Product;
 
 public class ProductDao {
 
-	static SessionFactory sessionFactory;
-	static Session session;
+	SessionFactory sessionFactory;
+	Session session;
 	
-	static
-	{
-		sessionFactory = new Configuration().configure().buildSessionFactory();
-		session = sessionFactory.openSession();
-	}
+//	{
+//		sessionFactory = new Configuration().configure().buildSessionFactory();
+//		session = sessionFactory.openSession();
+//	}
 	
 	public Product getProduct(int id)
 	{
@@ -28,6 +27,9 @@ public class ProductDao {
 	
 	public List<Product> getProducts(int value)
 	{
+		sessionFactory = new Configuration().configure().buildSessionFactory();
+		session = sessionFactory.openSession();
+		System.out.println("Inside Dao");
 		List<Product> productList = session.createQuery("from Product where price <" + value).getResultList();
 		return productList;
 	}

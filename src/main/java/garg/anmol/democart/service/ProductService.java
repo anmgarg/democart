@@ -7,6 +7,8 @@ import garg.anmol.democart.model.*;
 
 public class ProductService {
 
+	ProductDao productDao = new ProductDao();
+	
 	public List<Product> listProducts(int value)
 	{
 		List<Product> productList = new ProductDao().getProducts(value);
@@ -17,7 +19,8 @@ public class ProductService {
 	public int getTotal(int value)
 	{
 		int total = 0;
-		List<Product> productList = new ProductDao().getProducts(value);
+		
+		List<Product> productList = productDao.getProducts(value);
 		
 		for(Product product : productList)
 		{
