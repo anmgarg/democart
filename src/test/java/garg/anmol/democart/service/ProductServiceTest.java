@@ -11,16 +11,16 @@ import org.junit.Test;
 import garg.anmol.democart.dao.ProductDao;
 import garg.anmol.democart.model.Product;
 import mockit.Expectations;
-import mockit.Injectable;
+import mockit.Mocked;
 import mockit.Tested;
-import mockit.internal.expectations.TestOnlyPhase;
+
 
 public class ProductServiceTest {
 
 	@Tested
 	ProductService productService;
 	
-	@Injectable
+	@Mocked
 	ProductDao productDao;
 	
 	private List<Product> productList;

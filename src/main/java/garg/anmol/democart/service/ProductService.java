@@ -7,7 +7,12 @@ import garg.anmol.democart.model.*;
 
 public class ProductService {
 
-	ProductDao productDao = new ProductDao();
+	ProductDao productDao;
+	
+	public ProductService()
+	{
+		productDao = new ProductDao();
+	}
 	
 	public List<Product> listProducts(int value)
 	{
