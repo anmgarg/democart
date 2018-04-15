@@ -14,13 +14,21 @@ public class ProductService {
 		productDao = new ProductDao();
 	}
 	
-	public List<Product> listProducts(int value)
+	/*
+	 * This method returns a list of products whose 
+	 * individual price is less than the passed value.
+	 */
+	private List<Product> listProducts(int value)
 	{
 		List<Product> productList = new ProductDao().getProducts(value);
 		
 		return productList;
 	}
 	
+	/*
+	 * This method returns the total price of products whose 
+	 * individual price is less than the passed value.
+	 */
 	public int getTotal(int value)
 	{
 		int total = 0;
@@ -34,4 +42,6 @@ public class ProductService {
 		
 		return total;
 	}
+	
+	
 }

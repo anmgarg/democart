@@ -48,4 +48,6 @@ public class ProductServiceTest {
 		int total = productService.getTotal(11000);
 		assertEquals(5000, total);
 	}
+	
+	
 }

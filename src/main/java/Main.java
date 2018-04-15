@@ -16,8 +16,7 @@ public class Main {
 		
 		product1.setName("Refrigerator");
 		product1.setPrice(10000);
-		productDao.saveProduct(product1);
-		
+		productDao.saveProduct(product1);		
 		
 		System.out.println(new ProductService().getTotal(11000));
 	}
